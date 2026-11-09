@@ -3,151 +3,260 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#10151d" media="(prefers-color-scheme: dark)">
-    <meta name="description" content="X4 brings agent-assisted engineering across repositories into one workflow: reproducible workspaces, orchestration, remote validation, and evidence for review.">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0b1017">
+    <meta name="description" content="X4 is how we build products with coding agents: one definition per product, workspaces across its repositories, a private preview of every change, and evidence on every pull request.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="X4 — Many repositories. One way forward.">
-    <meta property="og:description" content="Reproducible workspaces, agent orchestration, and remote validation. Bring the evidence with the change.">
+    <meta property="og:title" content="X4 — Building products with coding agents">
+    <meta property="og:description" content="Workspaces across repositories, private previews of every change, and evidence on every pull request.">
     <meta property="og:url" content="https://x4app.dev/">
-    <title>X4 — Many repositories. One way forward.</title>
+    <title>X4 — Building products with coding agents</title>
     <link rel="canonical" href="https://x4app.dev/">
     <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&family=Space+Grotesk:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="/assets/site.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header wrap">
-      <a class="brand" href="/" aria-label="X4 home">
-        <img src="/assets/logo.svg" width="36" height="36" alt="">
-        <span>X4<span class="brand-description">Engineering, connected.</span></span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="#workspace">Workspace</a>
-        <a href="https://docs.x4app.dev/">Documentation <span aria-hidden="true">↗</span></a>
-      </nav>
+
+    <header class="bar">
+      <div class="bar-inner">
+        <a class="brand" href="/" aria-label="X4 home">
+          <svg class="mark" viewBox="0 0 75 40" aria-hidden="true"><path d="M2 3H12L23 15L34 3H44L28 20L44 37H34L23 25L12 37H2L18 20Z"/><path d="M60 3H68V25H73V32H68V37H60V32H43V24ZM60 14L51 25H60Z" fill-rule="evenodd"/></svg>
+        </a>
+        <span class="bar-divider" aria-hidden="true"></span>
+        <nav class="bar-nav" aria-label="Sections">
+          <a href="#platform">Platform</a>
+          <a href="#how">How it works</a>
+          <a href="#concepts">Concepts</a>
+        </nav>
+        <div class="bar-actions">
+          <a class="bar-link" href="https://docs.x4app.dev/">Docs <span aria-hidden="true">↗</span></a>
+          <a class="button button-raised" href="https://control.x4app.dev/">Open Control</a>
+        </div>
+      </div>
     </header>
 
     <main id="main">
-      <section class="hero wrap" aria-labelledby="hero-heading">
+      <!-- Hero -->
+      <section class="hero wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span>Agent-assisted engineering</p>
-          <h1 id="hero-heading">Many repositories.<br><span>One way forward.</span></h1>
-          <p class="hero-description">Give your agents and your team a shared way to work. X4 connects reproducible workspaces, orchestration, and remote execution—with evidence you can review.</p>
+          <p class="pill"><span class="pill-dot" aria-hidden="true"></span>Agent-assisted engineering</p>
+          <h1 id="hero-title">One platform for building products with coding agents.</h1>
+          <p class="lede">Describe each product once. Work on it in workspaces that span its repositories, preview every change privately, and review pull requests with the test results, logs and preview links attached.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://docs.x4app.dev/">Explore the docs <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#workspace">Open your workspace <span aria-hidden="true">↓</span></a>
+            <a class="button button-primary" href="https://docs.x4app.dev/">Read the docs <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#how">See how it works <span aria-hidden="true">↓</span></a>
           </div>
-          <p class="hero-footnote">One operational layer. From the first checkout to the final review.</p>
         </div>
 
-        <div class="workflow" role="group" aria-labelledby="workflow-heading">
-          <div class="workflow-header">
-            <span id="workflow-heading">The X4 workflow</span>
-            <span class="workflow-symbol" aria-hidden="true">×4</span>
+        <figure class="change" aria-labelledby="change-caption">
+          <div class="change-card">
+            <div class="change-head">
+              <span class="change-id">ENG-142</span>
+              <strong>Saved carts for returning shoppers</strong>
+              <span class="chip chip-lime">In review</span>
+            </div>
+            <ol class="trail">
+              <li class="tone-mint">
+                <span class="trail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 4h6M8 4H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/><path d="m8.5 13 2.5 2.5 4.5-5"/></svg></span>
+                <span class="trail-text"><strong>Plan approved</strong><span>Factory session from the Linear issue</span></span>
+                <time>09:12</time>
+              </li>
+              <li class="tone-steel">
+                <span class="trail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M14 6h4a2 2 0 0 1 2 2v3M10 18H6a2 2 0 0 1-2-2v-3"/></svg></span>
+                <span class="trail-text"><strong>Workspace ready</strong><span><code>web</code> <code>api</code> <code>infra</code> on one branch</span></span>
+                <time>09:14</time>
+              </li>
+              <li class="tone-lime">
+                <span class="trail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span>
+                <span class="trail-text"><strong>Preview running</strong><span>Storefront · testing environment · private link</span></span>
+                <time>09:41</time>
+              </li>
+              <li class="tone-lime">
+                <span class="trail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg></span>
+                <span class="trail-text"><strong>Checks passed</strong><span>Unit, integration and browser tests · logs attached</span></span>
+                <time>09:52</time>
+              </li>
+            </ol>
+            <div class="change-foot">
+              <span>Pull request <code>#318</code></span>
+              <span class="evidence"><span>checks</span><span>logs</span><span>preview</span></span>
+            </div>
           </div>
-          <ol class="workflow-steps">
-            <li>
-              <span class="step-number" aria-hidden="true">01</span>
-              <div class="step-content">
-                <h2>Prepare together</h2>
-                <p>Connected repos. Reproducible workspaces.</p>
-                <div class="repo-labels" aria-hidden="true"><span>web/</span><span>api/</span><span>infra/</span></div>
-              </div>
-            </li>
-            <li>
-              <span class="step-number" aria-hidden="true">02</span>
-              <div class="step-content">
-                <h2>Coordinate the work</h2>
-                <p>Agents and humans, with a shared plan.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step-number" aria-hidden="true">03</span>
-              <div class="step-content">
-                <h2>Validate remotely</h2>
-                <p>Run checks in controlled execution environments.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step-number step-number-final" aria-hidden="true">04</span>
-              <div class="step-content">
-                <h2>Bring the evidence</h2>
-                <p>Logs, artifacts, and checks for human review.</p>
-              </div>
-            </li>
-          </ol>
-          <div class="workflow-footer"><span aria-hidden="true">↳</span> A clear path from intent to evidence.</div>
+          <figcaption id="change-caption">One change through X4. Names and times are illustrative.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Platform -->
+      <section class="section wrap" id="platform" aria-labelledby="platform-title">
+        <div class="section-head">
+          <p class="eyebrow">The platform</p>
+          <h2 id="platform-title">Four parts. One way of working.</h2>
+          <p>Each part does one job, and they share the same products, workspaces and evidence.</p>
+        </div>
+
+        <div class="parts">
+          <article class="part">
+            <span class="tile tone-lime" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4 3v-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="m9.5 9-2 2 2 2M14.5 9l2 2-2 2"/></svg></span>
+            <div class="part-text">
+              <h3>X4 Code</h3>
+              <p>The developer app. Run Claude and Codex threads across every repository in a product, with the workspace, sandbox and preview controls beside the conversation.</p>
+            </div>
+            <ul class="tags" aria-label="Highlights"><li>Agent threads</li><li>Product workspaces</li><li>Previews</li></ul>
+          </article>
+
+          <article class="part">
+            <span class="tile tone-text" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span>
+            <div class="part-text">
+              <h3>X4 Control</h3>
+              <p>The operations workspace. One sign-in for the machines, the model accounts and the product catalogue everything else reads from.</p>
+            </div>
+            <ul class="services" aria-label="Control services">
+              <li class="tone-steel"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/></svg><strong>Fleet</strong><span>Servers and devboxes</span></li>
+              <li class="tone-lime"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v13M9 20v-8h6v8M4 8h16"/><path d="M12 4v4"/></svg><strong>Gateway</strong><span>Model accounts and usage</span></li>
+              <li class="tone-mint"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M14 6h4a2 2 0 0 1 2 2v3M10 18H6a2 2 0 0 1-2-2v-3"/></svg><strong>Projects</strong><span>Products and previews</span></li>
+              <li class="tone-amber"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10.3 5 7.8 4.5 4 4.5v14c3.8 0 6.3.5 8 2 1.7-1.5 4.2-2 8-2v-14c-3.8 0-6.3.5-8 2Zm0 0v14"/></svg><strong>Docs</strong><span>Guides and reference</span></li>
+            </ul>
+          </article>
+
+          <article class="part part-factory">
+            <svg class="watermark" viewBox="0 0 34 21" aria-hidden="true"><use href="#mastra"/></svg>
+            <span class="tile tile-factory" aria-hidden="true"><svg viewBox="0 0 34 21"><use href="#mastra"/></svg></span>
+            <div class="part-text">
+              <h3>Mastra Factory</h3>
+              <p>Turns Linear issues into agent sessions. Factory plans the work, asks when it is unsure, implements on a devbox and opens the pull request.</p>
+            </div>
+            <ul class="tags" aria-label="Highlights"><li>Linear issues</li><li>Plans</li><li>Sessions on devboxes</li></ul>
+          </article>
+
+          <article class="part">
+            <span class="tile tone-amber" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M12.5 15H17"/></svg></span>
+            <div class="part-text">
+              <h3>X4 CLI</h3>
+              <p>The engine underneath. It sets up workspaces, starts previews, runs validation on remote workers and posts results to GitHub. People, editors and agents call the same commands.</p>
+            </div>
+            <p class="command" aria-label="Example command"><span aria-hidden="true">$</span> x4 workspace bootstrap --repo-set storefront</p>
+          </article>
         </div>
       </section>
 
-      <section class="workspace-section wrap" id="workspace" aria-labelledby="workspace-heading">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Your starting points</p>
-            <h2 id="workspace-heading">A place for every part of the work.</h2>
-          </div>
-          <p>Read the guide. Run the system.<br>Move the next idea forward.</p>
+      <!-- How it works -->
+      <section class="section wrap" id="how" aria-labelledby="how-title">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">From issue to evidence.</h2>
+          <p>The same four steps for every product, whether a person or an agent does the work.</p>
         </div>
-        <div class="destination-grid">
-          <a class="destination-card" href="https://docs.x4app.dev/">
-            <div class="card-topline">
-              <svg class="card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-2.5-1.8-5.8-2.4-9-1.5v14c3.2-.9 6.5-.3 9 1.5 2.5-1.8 5.8-2.4 9-1.5v-14c-3.2-.9-6.5-.3-9 1.5Z"/><path d="M12 6v14"/></svg>
-              <span class="access-label">Public</span>
-            </div>
-            <h3>Documentation</h3>
-            <p>Get started with X4. Find workspace guides, CLI references, and the operational details behind the workflow.</p>
-            <span class="card-link">Read the docs <span aria-hidden="true">↗</span></span>
-          </a>
-          <a class="destination-card" href="https://control.x4app.dev/">
-            <div class="card-topline">
-              <svg class="card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-              <span class="access-label access-private"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Tailscale required</span>
-            </div>
-            <h3>Control</h3>
-            <p>Your operations workspace. Monitor infrastructure with Fleet and manage model connections with Gateway.</p>
-            <span class="card-link">Open Control <span aria-hidden="true">↗</span></span>
-          </a>
-          <a class="destination-card" href="https://factory.x4app.dev/">
-            <div class="card-topline">
-              <svg class="card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
-              <span class="access-label access-private"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Tailscale required</span>
-            </div>
-            <h3>Factory</h3>
-            <p>Turn issues into plans and implementation. Follow coding-agent sessions and bring changes through review.</p>
-            <span class="card-link">Open Factory <span aria-hidden="true">↗</span></span>
-          </a>
-        </div>
-        <p class="private-note">Control and Factory are private workspaces. Connect to your organization’s Tailscale network before opening them; your existing sign-in and permissions still apply.</p>
+        <ol class="steps">
+          <li>
+            <span class="step-index" aria-hidden="true">01</span>
+            <h3>Describe the product</h3>
+            <p>Register its repositories, environments and preview profiles once in Control. Everyone starts from the same definition.</p>
+          </li>
+          <li>
+            <span class="step-index" aria-hidden="true">02</span>
+            <h3>Work in a workspace</h3>
+            <p>X4 Code and Factory open the product’s repositories together on a devbox, on matching branches with the product’s tooling.</p>
+          </li>
+          <li>
+            <span class="step-index" aria-hidden="true">03</span>
+            <h3>Preview the change</h3>
+            <p>Start the product at that exact version with the environment you choose, and share it on a private address.</p>
+          </li>
+          <li>
+            <span class="step-index step-index-final" aria-hidden="true">04</span>
+            <h3>Review the evidence</h3>
+            <p>Tests, logs and preview links come from real runs and are attached to the pull request, ready for a person to judge.</p>
+          </li>
+        </ol>
       </section>
 
-      <section class="principles wrap" aria-labelledby="principles-heading">
-        <div class="principles-intro">
-          <p class="eyebrow">Built around the work</p>
-          <h2 id="principles-heading">Keep the context.<br>Carry the proof.</h2>
-          <a class="text-link" href="https://docs.x4app.dev/">See how X4 fits together <span aria-hidden="true">↗</span></a>
+      <!-- Concepts -->
+      <section class="section wrap" id="concepts" aria-labelledby="concepts-title">
+        <div class="section-head">
+          <p class="eyebrow">Concepts</p>
+          <h2 id="concepts-title">A small vocabulary.</h2>
+          <p>Three words carry most of X4. They mean the same thing in the docs, in Control and in X4 Code.</p>
         </div>
-        <div class="principle-list">
-          <article>
-            <span class="principle-index" aria-hidden="true">01 /</span>
-            <div><h3>A shared workspace contract</h3><p>Repository sets, branches, and environment expectations travel with the work, so humans and agents start with the same context.</p></div>
-          </article>
-          <article>
-            <span class="principle-index" aria-hidden="true">02 /</span>
-            <div><h3>Execution with clear boundaries</h3><p>Coordinate work through the CLI and control plane. Run validation remotely and keep private previews inside your network.</p></div>
-          </article>
-          <article>
-            <span class="principle-index" aria-hidden="true">03 /</span>
-            <div><h3>Evidence attached to the change</h3><p>Use generated logs, artifacts, and check results to understand what ran and make an informed review.</p></div>
-          </article>
+        <dl class="concepts">
+          <div class="concept tone-mint">
+            <dt><span class="concept-key" aria-hidden="true">product</span>Product</dt>
+            <dd>A named application or service built from one or more repositories. It owns its development and testing environments.</dd>
+          </div>
+          <div class="concept tone-amber">
+            <dt><span class="concept-key" aria-hidden="true">environment</span>Environment</dt>
+            <dd>A named set of configuration values and secret references for one product, such as development or testing.</dd>
+          </div>
+          <div class="concept tone-lime">
+            <dt><span class="concept-key" aria-hidden="true">preview</span>Preview</dt>
+            <dd>A running instance of a product or repository at a particular version, configured with an environment.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Guardrails -->
+      <section class="section wrap" aria-labelledby="guardrails-title">
+        <div class="guardrails">
+          <div class="guardrails-head">
+            <p class="eyebrow">Built-in guardrails</p>
+            <h2 id="guardrails-title">Safe by default.</h2>
+          </div>
+          <ul class="guardrail-list">
+            <li><strong>Plans before actions</strong><span>GitHub and remote commands show what they will do and run only when asked.</span></li>
+            <li><strong>Private previews</strong><span>Preview links stay inside the private network. Local-only addresses are refused.</span></li>
+            <li><strong>Secrets stay secret</strong><span>Environments check that keys exist without printing their values.</span></li>
+            <li><strong>Visible cleanup</strong><span>Worktree, branch and sandbox cleanup is shown before it is applied.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Destinations -->
+      <section class="section wrap" id="open" aria-labelledby="open-title">
+        <div class="section-head">
+          <p class="eyebrow">Get started</p>
+          <h2 id="open-title">Open X4.</h2>
+          <p>The documentation is public. Control and Factory are private: connect to the organization’s Tailscale network first, and your existing sign-in and permissions apply.</p>
+        </div>
+        <div class="destinations">
+          <a class="destination" href="https://docs.x4app.dev/">
+            <span class="tile tone-amber" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6.5C10.3 5 7.8 4.5 4 4.5v14c3.8 0 6.3.5 8 2 1.7-1.5 4.2-2 8-2v-14c-3.8 0-6.3.5-8 2Zm0 0v14"/></svg></span>
+            <span class="destination-text"><strong>Documentation</strong><span>Install the CLI, set up a first workspace, and read how the parts fit together.</span></span>
+            <span class="destination-foot"><span class="access">Public</span><span class="open">docs.x4app.dev <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <a class="destination" href="https://control.x4app.dev/">
+            <span class="tile tone-text" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span>
+            <span class="destination-text"><strong>X4 Control</strong><span>Fleet, Gateway, Projects and Docs behind one sign-in.</span></span>
+            <span class="destination-foot"><span class="access access-private"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Tailscale</span><span class="open">control.x4app.dev <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <a class="destination destination-factory" href="https://factory.x4app.dev/">
+            <span class="tile tile-factory" aria-hidden="true"><svg viewBox="0 0 34 21"><use href="#mastra"/></svg></span>
+            <span class="destination-text"><strong>Mastra Factory</strong><span>Agent sessions for Linear issues, run on your devboxes.</span></span>
+            <span class="destination-foot"><span class="access access-private"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Tailscale</span><span class="open">factory.x4app.dev <span aria-hidden="true">↗</span></span></span>
+          </a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer wrap">
-      <a class="footer-brand" href="/" aria-label="X4 home">X4<span>From intent to evidence.</span></a>
-      <a href="https://docs.x4app.dev/">Documentation <span aria-hidden="true">↗</span></a>
+    <footer class="footer">
+      <div class="footer-inner wrap">
+        <a class="footer-brand" href="/" aria-label="X4 home">
+          <svg class="mark" viewBox="0 0 75 40" aria-hidden="true"><path d="M2 3H12L23 15L34 3H44L28 20L44 37H34L23 25L12 37H2L18 20Z"/><path d="M60 3H68V25H73V32H68V37H60V32H43V24ZM60 14L51 25H60Z" fill-rule="evenodd"/></svg>
+          <span>From intent to evidence.</span>
+        </a>
+        <nav class="footer-nav" aria-label="X4 sites">
+          <a href="https://docs.x4app.dev/">Documentation</a>
+          <a href="https://control.x4app.dev/">Control</a>
+          <a href="https://factory.x4app.dev/">Factory</a>
+        </nav>
+      </div>
     </footer>
+
+    <!-- Mastra's mark, from the `mastra` package's Factory assets (dist/factory/mastra.svg, Apache-2.0). -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="mastra" viewBox="0 0 34 21"><path fill="currentColor" d="M4.49805 11.6934C6.98237 11.6934 8.99609 13.7081 8.99609 16.1924C8.9959 18.6765 6.98225 20.6904 4.49805 20.6904C2.01394 20.6903 0.000196352 18.6765 0 16.1924C0 13.7081 2.01382 11.6935 4.49805 11.6934ZM10.3867 0C12.8709 0 14.8846 2.01388 14.8848 4.49805C14.8848 4.8377 14.847 5.16846 14.7755 5.48643C14.4618 6.88139 14.1953 8.4633 14.9928 9.65L16.2575 11.5319C16.3363 11.6491 16.4727 11.7115 16.6137 11.703C16.7369 11.6957 16.8525 11.6343 16.9214 11.5318L18.1876 9.64717C18.9772 8.47198 18.7236 6.90783 18.4205 5.52484C18.3523 5.21392 18.3164 4.89094 18.3164 4.55957C18.3167 2.07546 20.3313 0.0615234 22.8154 0.0615234C25.2994 0.0617476 27.3132 2.0756 27.3135 4.55957C27.3135 4.93883 27.2665 5.30712 27.178 5.65896C26.8547 6.94441 26.5817 8.37932 27.2446 9.52714L28.459 11.6301C28.4819 11.6697 28.5245 11.6934 28.5703 11.6934C31.0545 11.6935 33.0684 13.7081 33.0684 16.1924C33.0682 18.6765 31.0544 20.6903 28.5703 20.6904C26.0861 20.6904 24.0725 18.6765 24.0723 16.1924C24.0723 15.8049 24.1212 15.4288 24.2133 15.0701C24.5458 13.7746 24.8298 12.3251 24.1609 11.1668L23.0044 9.16384C22.9656 9.09659 22.8931 9.05859 22.8154 9.05859C22.7983 9.05859 22.7824 9.06614 22.7728 9.08033L21.4896 10.9895C20.686 12.1851 20.9622 13.781 21.284 15.1851C21.3582 15.5089 21.3975 15.8461 21.3975 16.1924C21.3973 18.6764 19.3834 20.6902 16.8994 20.6904C14.4152 20.6904 12.4006 18.6765 12.4004 16.1924C12.4004 15.932 12.4226 15.6768 12.4651 15.4286C12.6859 14.14 12.8459 12.7122 12.1167 11.6271L11.2419 10.3253C10.6829 9.49347 9.71913 9.05932 8.78286 8.70188C7.0906 8.05584 5.88867 6.41734 5.88867 4.49805C5.88886 2.0139 7.90254 3.29835e-05 10.3867 0Z"/></symbol>
+    </svg>
   </body>
 </html>
